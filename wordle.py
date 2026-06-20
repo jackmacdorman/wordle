@@ -107,7 +107,7 @@ whole wider wield wispy witch witty woken world worse worst worth
 would wound wrath wring wrist wrote yacht yield young youth zappy
 zebra zesty zilch zippy zombie zonal""".split()
 
-WORDS = [w for w in WORDS if len(w) == 5]
+WORDS = list(dict.fromkeys(w for w in WORDS if len(w) == 5))
 
 STATS_FILE = Path.home() / ".wordle_stats.json"
 
